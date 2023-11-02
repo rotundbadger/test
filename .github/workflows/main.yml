@@ -18,6 +18,6 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: my-artifact
-          path: .
+          path: ./docker/Dockerfile
       - name: checkov
         uses: ./.github/workflows/checkov.yml

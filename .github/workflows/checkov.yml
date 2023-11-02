@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download code
-        uses: acitions/download-artifact@v2
+        uses: actions/download-artifact@v2
         with:
           name: my-artifact
-          path: .
+          path: docker/Dockerfile
       - name: Test with Checkov
         id: checkov
         uses: bridgecrewio/checkov-action@master
