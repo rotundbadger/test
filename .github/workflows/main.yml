@@ -9,7 +9,7 @@ on:
 
 jobs:
   
-  get:
+  check:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,9 +26,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    needs: get
+    needs: check
     steps:
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+      - uses: actions/checkout@v2
+      - name: Build image
+        run: |
+          cd docker && \
+          docker build . -t busybox --cpu-quota 20000 
+           
