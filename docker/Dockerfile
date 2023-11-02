@@ -1,4 +1,4 @@
-FROM busybox:alpine
+FROM busybox
 HEALTHCHECK NONE
 USER busybox
 
