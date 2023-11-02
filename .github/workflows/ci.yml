@@ -6,7 +6,6 @@ on:
 jobs:
   docker:
     environment: deploy
-    env: 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
