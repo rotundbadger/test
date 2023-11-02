@@ -1,7 +1,7 @@
 FROM busybox:1.36
 HEALTHCHECK NONE
 COPY src/* /
-USER root
+USER busybox
 
 
 ENTRYPOINT ["cat", "output.txt"]
