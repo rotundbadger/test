@@ -15,6 +15,7 @@ jobs:
         uses: actions/checkout@v3
 
   check:
+    runs-on: ubuntu-latest
     steps:
       - name: checkov
         id: checkov
