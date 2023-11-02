@@ -1,8 +1,3 @@
-FROM node:alpine
-WORKDIR /usr/src/app
-COPY package*.json ./
-RUN npm install
-USER curl
-COPY . .
-HEALTHCHECK CMD curl --fail http://localhost:3000 || exit 1
-CMD ["node","app.js"]
+FROM busybox:alpine
+USER busybox
+
