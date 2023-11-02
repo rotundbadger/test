@@ -21,7 +21,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: ./docker/
+          context: .
           push: true
           tags: rwiggs/busybox:latest
           cache-from: type=registry,ref=rwiggs/busybox:latest
