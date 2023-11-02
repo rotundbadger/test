@@ -12,6 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
+      - name checkout
+        uses: actions/checkout@v2
+      - name: upload code
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: ./code
       - name: checkov
         uses: ./.github/workflows/checkov.yml
