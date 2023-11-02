@@ -11,14 +11,15 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checout@v3
       - name: Download code
         uses: actions/download-artifact@v3
         with:
-          name: my-artifact
           path: docker/Dockerfile
       - name: check path
         run: |
           ls -l docker/Dockerfile
+        shell: sh
       - name: Test with Checkov
         id: checkov
         uses: bridgecrewio/checkov-action@master
