@@ -2,11 +2,10 @@ name: ci
 
 on:
   workflow_call:
-  workflow_dispatch:
 
 jobs:
   docker:
-    environment: deploy
+    # environment: deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -16,12 +15,12 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: ${{ secrets.DOCKERHUB_USER }}
+          pssword: ${{ secrets.DOCKERHUB_PASSWORD }}
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./docker/
           push: true
           tags: rwiggs/busybox:latest
           cache-from: type=registry,ref=rwiggs/busybox:latest

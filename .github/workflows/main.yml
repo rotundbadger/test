@@ -3,7 +3,7 @@ name: workermagic
 on:
   push:
     paths:
-      - 'docker/*'
+      - '**'
 
   workflow_dispatch:
 
@@ -23,6 +23,5 @@ jobs:
   build:
     runs-on: ubuntu-latest
     needs: check
-    steps:
-      - name: Get docker workflow
-        uses: ./.github/workflows/docker-build.yml
+    name: Get D
+    uses: ./.github/workflows/ci.yml
