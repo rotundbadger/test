@@ -1,4 +1,5 @@
 name: workermagic
+
 on:
   push:
     paths:
