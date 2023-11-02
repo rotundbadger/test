@@ -11,7 +11,7 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checout@v3
+      - uses: actions/checkout@v3
       - name: Test with Checkov
         id: checkov
         uses: bridgecrewio/checkov-action@master
