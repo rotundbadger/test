@@ -24,4 +24,4 @@ jobs:
     runs-on: ubuntu-latest
 
     needs: check
-    uses: .github/workflows/docker-build.yaml
+    uses: .github/actions/docker-build.yaml
