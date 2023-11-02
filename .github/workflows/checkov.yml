@@ -15,7 +15,7 @@ jobs:
         uses: acitions/download-artifact@v2
         with:
           name: my-artifact
-          path: ./code
+          path: .
       - name: Test with Checkov
         id: checkov
         uses: bridgecrewio/checkov-action@master
