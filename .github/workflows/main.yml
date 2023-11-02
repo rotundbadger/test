@@ -15,6 +15,7 @@ jobs:
         uses: actions/checkout@v3
 
   check:
+    steps:
       - name: checkov
         id: checkov
         uses: bridgecrewio/checkov-action@master
