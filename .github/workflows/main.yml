@@ -1,7 +1,7 @@
 on:
   push:
     paths:
-      - './docker/Dockerfile'
+      - 'docker/*'
 
   workflow_dispatch:
 
