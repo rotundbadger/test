@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download code
-        uses: acitions/download-artefact@v2
+        uses: acitions/download-artifact@v2
         with:
           name: my-artifact
           path: ./code
