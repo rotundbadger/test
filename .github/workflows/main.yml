@@ -7,15 +7,19 @@ on:
 
 jobs:
   
-  check:
+  get:
     runs-on: ubuntu-latest
 
     steps:
       - name: checkout
         uses: actions/checkout@v3
+
+  check:
       - name: checkov
         id: checkov
         uses: bridgecrewio/checkov-action@master
         with:
           directory: docker
           framework: dockerfile
+
+     
