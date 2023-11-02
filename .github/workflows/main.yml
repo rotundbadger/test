@@ -1,6 +1,7 @@
 on:
   push:
-    branches: [ main ]
+    paths:
+      - './docker/Dockerfile'
 
   workflow_dispatch:
 
@@ -14,9 +15,6 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
 
-  check:
-    runs-on: ubuntu-latest
-    steps:
       - name: checkov
         id: checkov
         uses: bridgecrewio/checkov-action@master
