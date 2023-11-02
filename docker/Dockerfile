@@ -1,4 +1,3 @@
 FROM busybox:1.36
 HEALTHCHECK NONE
 USER busybox
-
