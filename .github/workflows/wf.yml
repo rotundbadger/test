@@ -1,9 +1,8 @@
 ---
 name: Checkov
-on:
-  push:
-    branches:
-      - master
+on: ['push', 'commit']
+  branches:
+    - master
   workflow_dispatch:
   
 jobs:
