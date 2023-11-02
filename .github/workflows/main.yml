@@ -14,10 +14,5 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
-      - name: upload code
-        uses: actions/upload-artifact@v3
-        with:
-          name: my-artifact
-          path: docker/Dockerfile
       - name: checkov
         uses: ./.github/workflows/checkov.yml
