@@ -3,4 +3,5 @@ HEALTHCHECK NONE
 COPY src/* .
 USER busybox
 
+
 ENTRYPOINT ["cat", "output.txt"]
