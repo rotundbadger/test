@@ -1,4 +1,4 @@
-FROM alpine:1.36
+FROM alpine:3.18.4
 HEALTHCHECK NONE
 RUN apk add fortune
 COPY ./docker/src/* /
