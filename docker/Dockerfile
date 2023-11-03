@@ -1,6 +1,6 @@
 FROM busybox:1.36
 HEALTHCHECK NONE
-COPY ./src/* /
+COPY ./docker/src/* /
 USER busybox
 
 
