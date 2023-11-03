@@ -21,8 +21,8 @@ jobs:
           framework: dockerfile
 
   build:
-    environment: deploy
     needs: check
     name: Get D
     uses: ./.github/workflows/ci.yml
     secrets: inherit
+    environment: deploy
