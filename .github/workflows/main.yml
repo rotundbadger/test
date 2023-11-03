@@ -24,7 +24,5 @@ jobs:
     needs: check
     name: Get D
     uses: ./.github/workflows/ci.yml
-    secrets:
-      dh_user: ${{ secrets.DOCKERHUB_USERNAME }}
-      dh_pass: ${{ secrets.DOCKERHUB_TOKEN }}
+    secrets: inherit
 
