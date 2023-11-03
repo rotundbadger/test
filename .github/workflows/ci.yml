@@ -6,8 +6,6 @@ on:
 
 jobs:
   docker:
-    environment:
-      name: deploy
     runs-on: self-hosted
     steps:
       - name: Checkout
