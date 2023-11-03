@@ -8,6 +8,7 @@ jobs:
   docker:
     environment: dep
     runs-on: ubuntu-latest
+     
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -16,14 +17,14 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.USER }}
-          password: ${{ secrets.PWD }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: .
-          file: ./docker/Dockerfile
-          push: true
-          tags: ${{ secrets.USER }}/busybox:latest
-          cache-from: type=registry,ref=${{ secrets.USER }}/busybox:latest
-          cache-to: type=inline
+         context: .
+         file: ./docker/Dockerfile
+         push: true
+         tags: ${{ secrets.DOCKERHUB_USERNAME }}/busybox:latest
+         cache-from: type=registry,ref=${{ secrets.DOCKERHUB_TOKEN }}/busybox:latest
+         cache-to: type=inline
