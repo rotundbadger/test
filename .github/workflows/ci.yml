@@ -26,4 +26,4 @@ jobs:
          push: true
          tags: ${{ secrets.DOCKERHUB_USERNAME }}/fortune:${{  github.ref_name }}
          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/fortune:${{  github.ref_name }}
-         ache-to: type=inline
+         cache-to: type=inline

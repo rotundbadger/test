@@ -2,8 +2,11 @@ name: workermagic
 
 on:
   push:
-    paths:
-      - '**/**'
+    branches: 
+      - main
+    tags:
+      - 'v**'
+
 
   workflow_dispatch:
 
