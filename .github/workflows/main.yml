@@ -25,4 +25,3 @@ jobs:
     name: Get D
     uses: ./.github/workflows/ci.yml
     secrets: inherit
-    environment: deploy

@@ -6,6 +6,8 @@ on:
 
 jobs:
   docker:
+    environment:
+      name: deploy
     runs-on: self-hosted
     steps:
       - name: Checkout
@@ -25,4 +27,4 @@ jobs:
          push: true
          tags: ${{ secrets.DOCKERHUB_USERNAME }}/busybox:latest
          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_TOKEN }}/busybox:latest
-         cache-to: type=inline
+         ache-to: type=inline
