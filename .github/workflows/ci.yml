@@ -24,5 +24,5 @@ jobs:
          file: ./docker/Dockerfile
          push: true
          tags: ${{ secrets.DOCKERHUB_USERNAME }}/busybox:latest
-         cache-from: type=registry,ref=${{ secrets.DOCKERHUB_TOKEN }}/busybox:latest
+         cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/busybox:latest
          ache-to: type=inline
